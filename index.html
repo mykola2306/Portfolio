@@ -5,7 +5,6 @@
     <title>Mykola Goral Portfolio Page</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
@@ -50,10 +49,31 @@
         </div>
     </div>
 
-    <h2 id="portfolio">My Work</h2>
+    <div class="container-fluid tab">
+        <div class="container">
+            <ul id="tabs" class="tabs">
+                <li class="active">My Work</li>
+                <li>Recreating Websites</li>
+            </ul>
+        </div>
+    </div>
 
-    <div class="container work">
+    <!--
+    <div class="container-fluid tab">
+        <div class="container">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Codepen</label>
 
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Dribbble</label>
+            <section id="content1"></section>
+            <section id="content2"></section>
+        </div>
+    </div>
+-->
+
+
+    <div id="work" class="container work">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 left">
                 <img class="thumbnail" src="img/firstWebSite.jpg">
@@ -96,15 +116,15 @@
                 <p>
                     This is a page that i created to gain experience in working with data from a text file. Data in the text file consists of lines and each line has a word and 2 numbers.
                 </p>
-                <p>
-                    Two additional columns are added after processing the text file. I used a table sorter plugin to able to sort any of the columns that i want.
-                </p>
-
                 <div class="dataExample well">
                     <p>name1 150905 2005</p>
                     <p>name2 188973 2263</p>
                     <p>name3 65699 1554</p>
                 </div>
+                <p>
+                    Two additional columns are added after processing the text file. I used a table sorter plugin to able to sort any of the columns that i want.
+                </p>
+
                 <p class="technologies-used">
                     <span class="tech html">HTML</span>
                     <span class="tech css">CSS</span>
@@ -128,15 +148,15 @@
                 <img class="thumbnail" src="img/battleship.JPG">
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 left">
                 <img class="thumbnail" src="img/rgbColorGuess.JPG">
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 right">
-                <h3><a href="https://mykola2306.github.io/rgbColorGuess/" target="_blank">RGB Color Guess Game</a></h3>
+                <h3><a href="https://mykola2306.github.io/rgbColorGuess/" target="_blank">RGB Color Guess</a></h3>
                 <p>
-                    Can you guess the color color?
+                    This was a project i did while coding along with a video.
                 </p>
                 <p class="technologies-used">
                     <span class="tech html">HTML</span>
@@ -145,8 +165,20 @@
                 </p>
             </div>
         </div>
+    </div>
 
-
+    <div id="recreating" class="container work">
+<!--        <img src="img/websiteProgress5.png">-->
+        
+        <img id="myImg" src="img/websiteProgress5.png" alt="First Recreation">
+<!--        <img id="myImg" src="img/websiteProgress5Vert.png" alt="First Recreation">-->
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
     </div>
 
     <div class="container-fluid footer">
@@ -155,12 +187,13 @@
                 <span class="fa fa-github">GitHub</span>
             </a>
             <p class="center">Made by me © 2017.</p>
-            
+
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

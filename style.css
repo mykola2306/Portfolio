@@ -1,5 +1,7 @@
 body {
     font-family: sans-serif;
+    /*    color: white;*/
+    /*        background: url(img/b6.png);*/
 }
 
 .navbar-inverse {
@@ -36,10 +38,99 @@ p {
 h2 {
     text-align: center;
 }
-h3{
+
+h3 {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+
+
+.tab {
+    font-size: 30px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.tab ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    color: #bbb;
+}
+
+.tab ul li {
+    width: 50%;
+    display: block;
+    float: left;
+    height: 100%;
+
+
+
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tab ul li:hover {
+    color: #888;
+}
+
+.activeTab {
+    color: #555;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+}
+
+
+
+
+
+
+
+
+/*  ==========    */
+
+input {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 11px solid transparent;
+}
+
+
+label:hover {
+    color: #888;
+    cursor: pointer;
+}
+
+input:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 3px solid orange;
+    border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+    display: block;
+}
+
+
+
+
+
+
+
+/*  =============   circle  =============*/
 
 /*
 .about{
@@ -111,12 +202,14 @@ img {
 
 
 
+
 hr {
     border: 0;
     height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
 
 .work .row:nth-of-type(even) {
     padding-left: 150px;
@@ -153,36 +246,164 @@ hr {
 .bootstrap {
     background: #4f2369;
 }
+
 .js {
     background: #f9db3d;
     padding: .2em 1.2em .3em;
 }
 
-.dataExample{
+.dataExample {
     font-family: "Courier New";
     padding: 5px;
     margin-bottom: 5px;
 }
-.dataExample p{
+
+.dataExample p {
     margin-bottom: 0;
     font-size: 14px;
 }
 
-.footer{
+.footer {
     color: black;
     background: #efefef;
     padding: 50px 0;
     text-align: center;
 }
-.footer p{
+
+.footer p {
     text-align: center;
 }
-.container-fluid .footer{
+
+.container-fluid .footer {
     padding: 0;
 }
-.footer a{
-font-size: 19px;
+
+.footer a {
+    font-size: 19px;
 }
+
+
+
+
+
+
+
+/*  Recreating  */
+
+#recreating img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+
+
+
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+#recreating .modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 1366px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+/*
+#recreating img {
+    border-radius: 0px;
+    width: 100%;
+}
+
+*/
+
+
+
+
+
+
+
 
 
 /* Small Devices, Tablets */
@@ -213,5 +434,10 @@ font-size: 19px;
     }
     .work .row:nth-of-type(even) {
         padding-left: 0;
+    }
+    .tab ul li {
+        width: 100%;
+        text-align: center;
+        float: none;
     }
 }
