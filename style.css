@@ -3,7 +3,6 @@ body {
     /*    color: white;*/
     /*        background: url(img/b6.png);*/
 }
-
 .navbar-inverse {
     background: #343a40;
     border-radius: 0;
@@ -42,6 +41,7 @@ h2 {
 h3 {
     margin-top: 5px;
     margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 
@@ -440,4 +440,28 @@ hr {
         text-align: center;
         float: none;
     }
+}
+.track{
+/*    float: left;*/
+/*
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+*/
+/*    display: none;*/
+}
+/*
+.track img{
+    border-radius: 0;
+    width: auto;
+}
+*/
+.tr{
+    height: 20px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.tr img{
+    border-radius: 0;
+    width: auto;
 }
