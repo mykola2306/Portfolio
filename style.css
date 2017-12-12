@@ -292,7 +292,6 @@ hr {
 
 #recreating img {
     width: 70%;
-    display: block;
     margin: 0 auto;
     border-radius: 0;
 }
@@ -364,14 +363,16 @@ hr {
 
 /* The Close Button */
 .close {
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 35px;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 80px;
     font-weight: bold;
     transition: 0.3s;
     opacity: 1;
+    z-index: 5;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .close:hover,
@@ -464,4 +465,28 @@ hr {
 .tr img{
     border-radius: 0;
     width: auto;
+}
+
+
+#recreating .row{
+    padding: 0 0;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#recreating h3{
+    color: #337ab7;    
+}
+
+#recreating img.gif{
+    width: 100%;
+    max-width: 461px;
+}
+#recreating img.gif:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+img.fullImgHidden{
+    display: none;
 }
