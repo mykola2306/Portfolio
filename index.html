@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mykola Goral Portfolio Page</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -76,6 +77,40 @@
     <div id="work" class="container work">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 left">
+                <img class="thumbnail" src="img/ext.jpg">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 right">
+                <h3><a href="https://github.com/mykola2306/ExtensionMangaNotify" target="_blank">Browser Extension</a></h3>
+                <h4>View an image of the extension</h4>
+                <p>
+                    This is my first extension that i created. When the user clicks the confirm button, I scheduled the code to run periodically in the future by using the chrome.alarms API to retrieve data from a website. Data is stored using localStorage.</p>
+                <p class="technologies-used">
+                    <span class="tech html">HTML</span>
+                    <span class="tech css">CSS</span>
+                    <span class="tech js">JS</span>
+                    <span class="tech jquery">jQuery</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 left">
+                <h3><a href="https://mykola2306.github.io/GuessTheLogo/" target="_blank">Guess the Logo</a></h3>
+                <p>
+                    Plan to add so the logo name would be shown if the user didn’t guess it in after 3 times. Also delete letters when forming the name, if the user entered an incorrect letter.
+                </p>
+                <p class="technologies-used">
+                    <span class="tech html">HTML</span>
+                    <span class="tech css">CSS</span>
+                    <span class="tech js">JS</span>
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 right">
+                <img class="thumbnail" src="img/guessLogo.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 left">
                 <img class="thumbnail" src="img/firstWebSite.jpg">
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 right">
@@ -137,11 +172,9 @@
             <div class="col-xs-12 col-sm-6 col-md-6 left">
                 <h3><a href="https://mykola2306.github.io/Performance-Line-Graph/" target="_blank">Performance Line Graph</a></h3>
                 <p>
-                    I collected a lot of data from a specific amount in an android app by using Wireshark and they were all stored in a text file. I needed a way to graphically represent each user’s performance. 
-                    <br>
-                    I used an open source graphing library plotly.js. In order to create the graph, I need an array of objects, each representing one user. Then I used a method that was provided by the library to make the graph.
-                    <br>
-                    To compare a user individually with some else, double click on the name and add other users by clicking their name.
+                    I collected a lot of data from a specific amount in an android app by using Wireshark and they were all stored in a text file. I needed a way to graphically represent each user’s performance.
+                    <br> I used an open source graphing library plotly.js. In order to create the graph, I need an array of objects, each representing one user. Then I used a method that was provided by the library to make the graph.
+                    <br> To compare a user individually with some else, double click on the name and add other users by clicking their name.
                 </p>
                 <p class="technologies-used">
                     <span class="tech html">HTML</span>
@@ -212,13 +245,25 @@
                 </p>
             </div>
         </div>
+        <!-- The Modal -->
+        <div id="myModalExt" class="modalExt">
+
+            <!-- Modal content -->
+            <div class="modal-contentExt">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+                <img class="thumbnail" src="img/ext.jpg">
+                
+            </div>
+
+        </div>
     </div>
 
     <div id="recreating" class="container work">
         <!--        <img src="img/websiteProgress5.png">-->
         <h3 class="text-center">Original website is on the left. On the right is my attempt of recreating it</h3>
-        <img id="myImg" src="img/websiteProgress5.png" alt="First Recreation">        
-        
+        <img id="myImg" src="img/websiteProgress5.png" alt="First Recreation">
+
         <!--        <img id="myImg" src="img/websiteProgress5Vert.png" alt="First Recreation">-->
 
         <!-- The Modal -->
@@ -227,7 +272,7 @@
             <img class="modal-content" id="img01">
             <div id="caption"></div>
         </div>
-        
+
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <h3 class="text-center">PSD to HTML</h3>
