@@ -2,10 +2,8 @@ var tabs = document.getElementById("tabs").getElementsByTagName("li");
 var work = document.getElementById("work");
 var recreating = document.getElementById("recreating");
 recreating.style.display = "none";
-//var work = document.getElementsByClassName("work");
 
 tabs[0].classList.add("activeTab");
-//document.getElementsByClassName("work").style.backgroundColor = "lightblue";
 
 tabs[0].addEventListener("click", function () {
     tabs[0].classList.add("activeTab");
@@ -22,45 +20,39 @@ tabs[1].addEventListener("click", function () {
     work.style.display = "none";
     recreating.style.display = "block";
 });
-
-
-
+//---------------------------------------------------------
 // make the second tab active for easier manipulation
 
-//tabs[1].classList.add("activeTab");
-//work.style.display = "none";
-//recreating.style.display = "block";
+// tabs[1].classList.add("activeTab");
+// work.style.display = "none";
+// recreating.style.display = "block";
+//---------------------------------------------------------
 
 
-
-
-
-
-
-
-
+//==========================================================
+// Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var img2 = document.getElementById('myImg2');
-
-
-
+var img = document.getElementsByClassName('myImg');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-img.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-};
-img2.onclick = function () {
-    var img2 = document.querySelector('.fullImgHidden');
-    modal.style.display = "block";
-    modalImg.src = img2.src;
-    captionText.innerHTML = img2.alt;
-};
+for (var i = 0; i < img.length; i++) {
+    img[i].addEventListener("click", function () {
+        var sibling = this.nextElementSibling;
+        if (sibling.classList.contains("fullImgHidden")) {
+            modalImg.src = sibling.src;
+        } else {
+            modalImg.src = this.src;
+        }
+        modal.style.display = "block";
+        captionText.innerHTML = this.alt;
 
+
+
+    });
+}
+// myImgHidden
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -69,33 +61,20 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
     modal.style.display = "none";
 }
-
-
-
-
-
-// Get the modal
-var modal = document.getElementById('myModalExt');
-
-// Get the button that opens the modal
-var viewExtImg = document.querySelector("h4");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-viewExtImg.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+//==========================================================
+
+// open images through h4
+var h4 = document.querySelectorAll("h4");
+for (var i = 0; i < h4.length; i++) {
+    h4[i].addEventListener("click", function () {
+        modalImg.src = h4[0].title;        
+        modal.style.display = "block";
+        captionText.innerHTML = this.alt;
+    });
 }
