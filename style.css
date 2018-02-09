@@ -206,7 +206,9 @@ hr {
     margin: 0 auto;
     border-radius: 0;
 }
-
+#recreating a {
+    
+}
 #myImg {
     border-radius: 5px;
     cursor: pointer;
