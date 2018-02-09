@@ -1,0 +1,665 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /* background: lightblue; */
+}
+
+.container {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+
+header .topBar {
+  background: #2c3e50;
+  min-height: 42px;
+  border-bottom: 1px solid #e0dfdf;
+}
+
+header .topBar .container {
+  display: flex;
+}
+
+header .login {
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: 300;
+  color: #fff;
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 41px;
+}
+header .login {
+  display: flex;
+  justify-content: center;
+}
+
+
+header .login li {
+  padding: 0 17px;
+  border-right: 1px solid #17202a;
+  border-left: 1px solid #374d63;
+}
+
+header .login li:nth-child(1) {
+  border-left: none;
+  padding-left: 0;
+}
+
+header .login li:last-of-type {
+  border-right: none;
+}
+
+header .login a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .login a:hover {
+  color: #1dd2af;
+}
+
+header .login li svg:not(:root).svg-inline--fa {
+  margin-right: 8px;
+}
+
+header .login .widthNone {
+  padding: 0;
+}
+
+header .media {
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: 300;
+  color: #fff;
+  list-style-type: none;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  line-height: 41px;
+}
+
+header .media li {
+  padding: 0 17px;
+  border-right: 1px solid #17202a;
+  border-left: 1px solid #374d63;
+}
+
+header .media li:nth-child(1) {
+  /* border-right: none; */
+  border-left: none;
+  padding: 0;
+}
+
+header .last-item {
+  margin-left: auto;
+}
+
+/* ================================================================= */
+
+/* ===========================  NAV  =============================== */
+
+/* ================================================================= */
+
+nav h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  padding: 6px 0;
+  margin: 0;
+}
+
+nav .container {
+  display: flex;
+  padding: 16px 0;
+}
+
+nav h1 span {
+  color: #1dd2af;
+}
+
+nav ul {
+  color: #5d6e80;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+nav li {
+  margin-left: 37px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+nav li:hover {
+  color: #39d5b5;
+}
+
+nav li:last-child {
+  color: #2c3e50;
+  border-radius: 50%;
+  border: 2px solid #2c3e50;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  bottom: 11px;
+  padding-top: 10px;
+  padding-left: 11px;
+}
+
+nav li:last-child:hover {
+  color: #39d5b5;
+  border: 2px solid #39d5b5;
+}
+
+/* ================================================================= */
+
+/* =========================  BANNER  ============================== */
+
+/* ================================================================= */
+
+.banner {
+  height: 698px;
+  padding-top: 285px;
+  background-image: url("../img/banner.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner .container {
+  text-align: center;
+  color: #fff;
+}
+
+.banner h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.banner p {
+  font-size: 25px;
+}
+
+.banner button {
+  text-transform: uppercase;
+  font-size: 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 15px 32px;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  outline: none;
+}
+.banner button:hover {
+  background: #1dd2af;
+  border: 2px solid #1dd2af;
+}
+
+
+
+/* ================================================================= */
+
+/* =========================  BANNER  ============================== */
+
+/* ================================================================= */
+.holidayFind{
+  background: #2c3e50;
+  border-top: 1px solid #3a4e61;
+}
+.holidayFind p{
+  margin: 3px;
+  color: #9fb0c0;
+  width: 164px;
+  height: 100%;  
+  font-size: 19px;
+  padding-right: 10px;
+  margin-right: 20px;
+  border-right: 1px solid #3f5266;
+}
+.holidayFind p span{
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+.holidayFind .container{
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+}
+input[type=date] {
+  color: #8a8a8a;
+}
+.holidayFind form{
+  color: #8899a8;
+  font-size: 22px;
+}
+.holidayFind form label{
+  padding-right: 20px;
+}
+.holidayFind form input[type="text"], input[type="date"]{
+  height: 49px;
+  width: 230px;
+  margin-right: 15px;
+}
+.holidayFind form input[type="button"]{
+  height: 49px;
+  width: 108px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #1dd2af;
+  border: none;
+  padding: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  top: 2px;
+}
+form{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================================================= */
+
+/* =========================  Main  ================================ */
+
+/* ================================================================= */
+.specialOffers{
+  padding-top: 80px;
+  height: 635px;
+}
+.specialOffers .container>h3{
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 400;
+  color: #2c3e50;
+  text-align: center;
+  text-transform: uppercase;
+}
+.specialOffers .container>p{
+  margin: 0;
+  margin-bottom: 90px;
+  font-size: 16px;
+  color: #626262;
+  text-align: center;
+}
+.offers{
+  margin: auto;
+  display: flex;  
+  overflow: auto;
+}
+.offerItem{
+  background: #eeeeee;
+  flex: 0 0 276px;
+  padding: 5px;
+  position: relative;
+  margin-right: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  color: #626262;  
+}
+.offerItem p{
+  padding-left: 15px;
+  margin: 0;
+}
+.offerItem .imgFit{
+  height: 190px;  
+}
+.offerItem .imgFit img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offerItem svg{
+  color: #9fb0c0;
+  font-size: 29px;
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+}
+.offerItem:hover{
+  background: #1dd2af;
+}
+.offerItem:hover svg{
+  color: #fff;
+}
+.hoverBg{
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.offerItem:hover .hoverBg{
+  background: #2c3e50;
+}
+.offerItem:hover .hoverBg p:first-child{
+  color: #fff;
+}
+.offerItem:hover .hoverBg p:nth-child(2){
+  color: #8899a8;
+}
+/* ========= CUSTOM SCROLL =========== */
+/* width */
+.offers::-webkit-scrollbar,
+.comments::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.offers::-webkit-scrollbar-track,
+.comments::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+.offers::-webkit-scrollbar-thumb,
+.comments::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.offers::-webkit-scrollbar-thumb:hover,
+.comments::-webkit-scrollbar-thumb:hover{
+  background: #555; 
+}
+/* ================================================================= */
+
+/* ======================  Holiday Type  =========================== */
+
+/* ================================================================= */
+.holidayType{
+  min-height: 518px;
+  padding-top: 78px;
+  color: #9eafc0;
+  background-image: url("../img/holidayBg.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.holidayType h3{
+  margin: 0;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.type{
+  margin-top: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.holidayType h3, 
+.holidayType p{
+  text-align: center;
+}
+.typeItems img{
+  width: 155px;
+}
+.typeItems p{
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+
+/* ================================================================= */
+
+/* ========================  Response  ============================= */
+
+/* ================================================================= */
+.response{
+  height: 462px;
+  padding-top: 65px;
+}
+.response h3{
+  font-size: 25px;
+  color: #2c3e50;
+  margin: 0;
+}
+.response p{
+  color: #626262;
+}
+.response h3,
+.response .container>p{
+  text-align: center;
+}
+
+.comments{
+  display: flex;
+  overflow: auto;
+  padding-bottom: 20px;
+}
+.commentItem{
+  flex: 0 0 475px;  
+  height: 165px;
+  margin-right: 11px;
+  padding-top: 20px;
+  padding-left: 25px;
+  background-image: url("../img/commentBg.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.commentItem p{
+  margin: 0;
+  color: #b4b4b4;
+  font-size: 15px;
+}
+.commentItem .clientName{
+  color: #a8e9d9;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.commentItem .country{
+  color: #dadada;
+}
+.commentItem:hover p{
+  color: #4d4d4d;
+}
+.commentItem:hover .clientName{
+  color: #1dd2af;
+}
+.commentItem:hover .country{
+  color: #b2b2b2;
+}
+/* ================================================================= */
+
+/* =========================  Footer  ============================== */
+
+/* ================================================================= */
+footer{
+  min-height: 446px;
+  background: #2c3e50;
+  padding-top: 55px;
+}
+.list{
+  display: flex;
+}
+.itemList{
+  width: 25%;
+  padding-right: 75px;
+}
+.itemList h3{
+  color: #1dd2af;
+  font-size: 25px;
+  margin: 0;
+}
+.itemList p{
+  color: #fff;
+  margin: 15px 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+.itemList a{
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 5px;
+  margin: 1px;
+  display: inline-block;
+}
+.itemList svg{
+  color: #fff; 
+  margin-top: 20px;
+  margin-right: 30px;
+  font-size: 25px;
+}
+.itemList input[type="text"]{
+  height: 33px;
+  border: 1px solid #19242e;
+  padding-left: 10px;
+  width: 148px;
+}
+.itemList input[type="button"]{
+  height: 33px;
+  background: #1dd2af;
+  color: #fff;
+  border: 1px solid #004437;
+  outline: none;
+  cursor: pointer;
+}
+.post{
+  display: flex;
+  padding-top: 20px;
+}
+.post p{
+  margin: 0;
+  padding-left: 10px;
+}
+.postImg img{
+  border: 1px solid #fff;
+  padding: 5px;
+}
+.post .postTime{
+  color: #1fc3a4;
+  font-size: 12px;
+}
+.lastestNews h3{
+  padding-bottom: 15px;
+}
+.address p{
+  margin: 10px 0;  
+  margin-bottom: 0;
+}
+.address .email{
+  margin: 0;
+}
+/* ================================================================= */
+
+/* =========================  Footer Bottom  ============================== */
+
+/* ================================================================= */
+footer .containerTop{
+  margin-bottom: 49px;
+}
+.borderTop{
+  border-top: 1px solid #394c5f;
+  min-height: 156px;  
+}
+.bottomFooter .container{  
+  /* height: 156px;   */
+}
+.bottomFooter ul{  
+  color: #fff;  
+  font-size: 15px;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-top: 32px;
+  justify-content: center;
+}
+.bottomFooter li{  
+  margin-right: 8px;  
+}
+.bottomFooter li::after{
+  content: "::";
+  margin-left: 8px;
+}
+.bottomFooter li:last-child::after{
+  content: unset;
+}
+.bottomFooter p{
+  font-size: 14px;
+  color: #9dafc0;
+  text-align: center;
+}
+.bottomFooter a{
+  width: 78px;
+  display: inline;
+}
+.bottomFooter img{
+  width: 78px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
+
+
+
+
+
+@media screen and (max-width: 980px) {
+  header .topBar .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  } 
+  header .topBar .last-item{
+    margin: unset;
+  }
+  nav .container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .container ul{
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .list{
+    flex-wrap: wrap;
+  }
+  .itemList{
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .containerTop{
+    padding-left: 20px;
+  }
+  .holidayFind .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .holidayFind p{
+    border-right: none;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 570px) {
+  .itemList{
+    width: 100%;
+    text-align: center;
+    padding-right: 20px;
+  }
+  .post{
+    justify-content: center;
+  }
+  .bottomFooter ul{ 
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
