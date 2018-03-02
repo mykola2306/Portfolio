@@ -39,7 +39,7 @@ body {
 }
 
 .overlay {
-    height: 100%;
+    min-height: 466px;
     background: rgba(0, 0, 0, 0.4);
 }
 
