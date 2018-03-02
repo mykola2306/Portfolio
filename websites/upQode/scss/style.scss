@@ -1,0 +1,856 @@
+@font-face {
+	font-family: beyno;
+	src: url(../font/BEYNO/BEYNO.otf);
+}
+
+// colors
+$yellow: #fff200;
+$white: #fff;
+$h2Color: #232323;
+$headerSpanColor: #009dda;
+// Progress Bar
+$progressBarColor: $headerSpanColor;
+$progressBarBorder: #dddddd;
+// Paragraphs
+$paragraphColor: #b8b8b8;
+$paragraphColorDarker: #797979;
+$paragraphDescription: #7f7f7f;
+$paragraphLight: #999999;
+$paragraphDark: #373737;
+// NavBar
+$navBrandColor: #503392;
+$navSearchColor: #e8e4f1;
+// Offers
+$offerSvgColor: #503392;
+$offerBorder: #ebebeb;
+// Carousel
+$carouselIndicators: #d7d7d7;
+// Form
+$inputsBorder: #979995;
+$submitBtnColor: $yellow;
+// footer
+$footerBg: #1a1a1a;
+$footerParagraph: #7a7a7a;
+$facebookSVG: #6782b8;
+$twitterSVG: #71d6fa;
+$googleSVG: #d5634f;
+$dribbleSVG: #e9779d;
+body {
+	font-family: Lato;
+	position: relative;
+}
+
+// -------------------------------------------------------------
+// 									Navigation bar fixed
+// -------------------------------------------------------------
+nav {
+	margin-bottom: 20px;
+	min-height: 70px;
+	.container {
+		padding: 0;
+		&>a {
+			padding-left: 0;
+			letter-spacing: 2px;
+		}
+		.navbar-brand {
+			padding-top: 0;
+			font-family: beyno;
+			font-size: 30px;
+			text-transform: uppercase;
+			color: $navBrandColor;
+			span {
+				font-weight: bold;
+				color: $headerSpanColor;
+			}
+		}
+	}
+	.navbar-nav .nav-item {
+		.linkHidden {
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		margin-right: 40px;
+		&:last-child {
+			margin-right: 0;
+			position: relative;
+			width: 180px;
+		}
+		.nav-link {
+			padding-left: 12px;
+		}
+	}
+	input[type="search"] {
+		height: 31px;
+		width: 180px;
+		margin-top: 6px;
+		border: none;
+		outline: none;
+		background: $navSearchColor;
+	} // move the img of the magnifying glass over to the search input
+	.searchImg {
+		position: absolute;
+		right: 27px;
+		top: 50%;
+		transform: translateY(-50%); // bottom: 50%;
+		cursor: pointer;
+	}
+	.navbar-nav {
+		.nav-item {
+			padding: 13px 0; // change color when a specific section is active
+			.active {
+				color: rgb(0, 177, 221) !important;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// 							Funky stuff to make the nested nav
+// 									Found it on the internet	
+// -------------------------------------------------------------
+.navbar-light {
+	.navbar-nav {
+		.nav-link {
+			color: rgb(64, 64, 64);
+		}
+	}
+}
+
+.btco-hover-menu a,
+.navbar>li>a {
+	text-transform: capitalize;
+	padding: 10px 15px;
+}
+
+.dropdown-menu {
+	padding: 0px 0;
+	margin: 0 0 0;
+	border: 0px solid rgba(0, 0, 0, .15);
+	border-top: 2px solid $yellow;
+	border-radius: 0px;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	.dropdown-item {
+		background: unset;
+	}
+}
+// Align the dropdown menu with anchor tag
+.first {
+	margin-left: 15px;
+}
+
+/*first level*/
+
+.btco-hover-menu .collapse ul>li:hover>a {
+	background: unset;
+}
+
+.btco-hover-menu .collapse ul ul>li:hover>a,
+.navbar .show .dropdown-menu>li>a:focus,
+.navbar .show .dropdown-menu>li>a:hover {
+	background: none;
+	color: $white;
+}
+
+/*third level*/
+
+.btco-hover-menu .collapse ul ul,
+.btco-hover-menu .collapse ul ul.dropdown-menu {
+	background: rgba(0, 0, 0, 0.65);
+	a {
+		color: $white;
+		&::before {
+			content: ">";
+			margin-right: 4px;
+		}
+		&:hover {
+			color: $yellow;
+			&::before {
+				content: ">>";
+				margin-right: 10px;
+				letter-spacing: -6px;
+			}
+		}
+	}
+}
+
+.btco-hover-menu .collapse ul ul ul,
+.btco-hover-menu .collapse ul ul ul.dropdown-menu {
+	background: rgba(0, 0, 0, 0.65);
+}
+
+.btco-hover-menu .collapse ul ul ul ul,
+.btco-hover-menu .collapse ul ul ul ul.dropdown-menu {
+	background: #f5f5f5
+}
+
+/*Drop-down menu work on hover*/
+
+.btco-hover-menu {
+	background: none;
+	margin: 0;
+	padding: 0;
+	min-height: 70px
+}
+
+@media only screen and (max-width: 991px) {
+	.btco-hover-menu .show>.dropdown-toggle::after {
+		transform: rotate(-90deg);
+	}
+}
+
+@media only screen and (min-width: 991px) {
+	.btco-hover-menu .collapse ul li {
+		position: relative;
+	}
+	.btco-hover-menu .collapse ul li:hover>ul {
+		display: block
+	}
+	.btco-hover-menu .collapse ul ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		min-width: 180px;
+		display: none
+	}
+	/*******/
+	.btco-hover-menu .collapse ul ul li {
+		position: relative
+	}
+	.btco-hover-menu .collapse ul ul li:hover>ul {
+		display: block
+	}
+	.btco-hover-menu .collapse ul ul ul {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		min-width: 180px;
+		display: none
+	}
+	/*******/
+	.btco-hover-menu .collapse ul ul ul li {
+		position: relative
+	}
+	.btco-hover-menu .collapse ul ul ul li:hover ul {
+		display: block
+	}
+	.btco-hover-menu .collapse ul ul ul ul {
+		position: absolute;
+		top: 0;
+		left: -100%;
+		min-width: 250px;
+		display: none;
+		z-index: 1
+	}
+}
+
+// -------------------------------------------------------------
+// 									Customizing the Carousel
+// -------------------------------------------------------------
+#home {
+	padding-top: 70px;
+}
+
+// give the slider a background IMG
+.carousel {
+	margin-bottom: 4rem;
+	background-image: url("../img/banner/bannerBG.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover; // add a gradient like on the template
+	.carouselGradient {
+		background: linear-gradient(to left, rgba(80, 51, 146, 0.8), rgba(0, 191, 243, 0.8)); // increase the width, so the button go further away from the main container for big screens
+		.carouselContainer {
+			max-width: 1540px;
+			position: relative;
+			margin: 0 auto;
+			.carousel-item {
+				min-height: 790px;
+				.carousel-caption {
+					position: unset;
+					z-index: 10;
+					padding-top: 290px;
+					h1 {
+						font-size: 64px;
+						text-transform: uppercase;
+						font-weight: 700;
+						text-align: center;
+						letter-spacing: 3px;
+						word-spacing: 6px;
+						margin-bottom: 25px;
+						span {
+							color: $yellow;
+						}
+					}
+					p {
+						max-width: 750px;
+						margin: auto;
+						text-align: center;
+						line-height: 30px;
+						padding: 0 10px;
+					}
+				}
+			}
+		} // making the dots that are located at the bottom of the slider
+		.carousel-indicators {
+			li {
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				margin-bottom: 16px;
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// 									Choose Us Section
+// -------------------------------------------------------------
+.chooseUs {
+	padding-top: 41px;
+	text-align: center;
+	.row {
+		h2 {
+			color: $h2Color;
+			font-size: 35px;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 2px;
+			margin-bottom: 20px;
+			span {
+				color: $headerSpanColor;
+			}
+		}
+		p {
+			color: $paragraphColor;
+			font-size: 14px;
+			line-height: 24px;
+			word-spacing: 2px;
+		}
+	}
+	.offer {
+		padding-top: 70px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		.offerItem {
+			width: 200px;
+			height: 270px;
+			border: 1px solid $offerBorder;
+			margin-bottom: 43px;
+			margin-right: 35px;
+			position: relative;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				// Make extra information appear for each offerItem when hovered
+				.itemMore {
+					transition: height 0.3s;
+					height: 150px;
+				}
+			}
+			.container {
+				svg {
+					font-size: 55px;
+					margin-top: 30px;
+					font-weight: 300;
+					color: $offerSvgColor;
+				}
+				.title {
+					color: $h2Color;
+					text-transform: uppercase;
+					margin-top: 52px;
+					font-weight: 900;
+				}
+				.description {
+					font-weight: 300;
+					color: $paragraphDescription;
+					line-height: 20px;
+				}
+			} // style for the hidden div for each offterItem that will appear when hovered
+			.itemMore {
+				transition: height 0.3s;
+				background: $offerSvgColor;
+				position: absolute;
+				height: 0px;
+				width: 100%;
+				bottom: 0;
+				overflow: hidden;
+				.title {
+					padding-top: 33px;
+					color: $white;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+				div {
+					border: 1px solid $white;
+					border-radius: 50%;
+					width: 35px;
+					height: 35px;
+					padding-top: 3px;
+					display: inline-block;
+					&:hover {
+						background: $white;
+						svg {
+							color: $offerSvgColor;
+						}
+					}
+					svg {
+						font-size: 14px;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// 											Products
+// -------------------------------------------------------------
+.ourProducts {
+	padding-top: 73px;
+	min-height: 840px;
+	background-image: url("../img/products/productsBg.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 73px;
+	.productTitle {
+		height: 160px;
+		background-image: url("../img/products/titleBg.png");
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		h2 {
+			color: $white;
+			font-size: 35px;
+			font-weight: 700;
+			padding: 43px 0;
+			margin-bottom: 0;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			span {
+				color: $yellow;
+			}
+		}
+	}
+	.container {
+		padding: 0;
+		.carousel {
+			margin-bottom: 0;
+			background-image: unset;
+			.carousel-control-next-icon,
+			.carousel-control-prev-icon {
+				background-color: $h2Color;
+				border-radius: 50%;
+			}
+			.carousel-control-next,
+			.carousel-control-prev {
+				top: unset;
+				bottom: 60px;
+			}
+			.carouselGradient {
+				background: unset;
+				.carousel-item {
+					min-height: 677px;
+					.carousel-caption {
+						position: unset;
+						z-index: 10;
+						padding-top: 120px;
+						color: black;
+						.product {
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: center;
+							.productItem {
+								max-width: 377px;
+								margin-bottom: 103px;
+								h3 {
+									color: $h2Color;
+									font-size: 24px;
+									text-transform: uppercase;
+									font-weight: 700;
+									margin-top: 15px;
+									margin-bottom: 4px;
+									padding-left: 20px;
+									letter-spacing: 1px;
+									font-weight: 700;
+								}
+								.type {
+									color: $offerSvgColor;
+									font-size: 16px;
+									font-weight: 500;
+									padding-bottom: 10px;
+								}
+								p {
+									line-height: 24px;
+									padding-left: 20px;
+									font-size: 14px;
+									font-weight: 300;
+									color: $paragraphColorDarker;
+									text-align: left;
+								}
+								.productDescription {
+									display: flex;
+								}
+							}
+						}
+					}
+				}
+			}
+			.carousel-indicators {
+				margin-bottom: 39px;
+				li {
+					background: $carouselIndicators;
+				}
+				.active {
+					background: $offerSvgColor;
+				}
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// 												About
+// -------------------------------------------------------------
+.about {
+	padding-top: 115px;
+	min-height: 800px;
+	.container {
+		padding-left: 0;
+		h2 {
+			color: $h2Color;
+			font-size: 35px;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 2px;
+			margin-bottom: 20px;
+			span {
+				color: $headerSpanColor;
+			}
+		}
+		p {
+			font-size: 14px;
+			line-height: 24px;
+			position: relative; // Make the numbers for the progress bar position on the right
+			span {
+				position: absolute;
+				right: 0;
+			}
+		} // style light colored paragraph
+		.light {
+			color: $paragraphLight;
+			padding-top: 2px;
+			word-spacing: 1px;
+			margin-bottom: 46px;
+		} // style darker colored paragraph
+		.dark {
+			color: $paragraphDark;
+			word-spacing: 1px;
+			margin-bottom: 58px;
+		} // style for the progress bar
+		.barWidth {
+			// outer space, which is just a border
+			height: 9px;
+			padding: 0 3px;
+			border: 1px solid $progressBarBorder;
+			display: flex;
+			align-items: center;
+			.barProgress {
+				// the bar that changes width 
+				height: 3px;
+				width: 0%;
+				transition: width 2s;
+				background: $progressBarColor;
+			}
+		}
+		.bars {
+			p {
+				font-size: 13px;
+				letter-spacing: 1px;
+				font-weight: 700;
+				margin-bottom: 14px;
+			}
+			.barWidth {
+				margin-bottom: 33px;
+			}
+		}
+		img {
+			padding-top: 74px;
+			margin-left: 20px;
+		}
+	} // -------------------------------------------------------------
+	// 							Easy Customizable progress bars
+	// -------------------------------------------------------------
+	// Here we can set delay and width for each separate progress bar
+	.barProgress.photoShop.triggeredCSS3 {
+		width: 79%;
+		transition-delay: 0.3s;
+	}
+	.barProgress.htmlCss.triggeredCSS3 {
+		width: 90%;
+		transition-delay: 0.3s;
+	}
+	.barProgress.js.triggeredCSS3 {
+		width: 69%;
+		transition-delay: 0.3s;
+	}
+	.barProgress.wordpress.triggeredCSS3 {
+		width: 92%;
+		transition-delay: 0.3s;
+	}
+}
+
+// -------------------------------------------------------------
+// 									Contact
+// -------------------------------------------------------------
+.contact {
+	padding-top: 117px;
+	.title {
+		text-align: center;
+		padding-top: 20px;
+		margin-bottom: 78px;
+		.container {
+			max-width: 710px;
+			h2 {
+				color: $h2Color;
+				font-size: 35px;
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 2px;
+				margin-bottom: 20px;
+				span {
+					color: $headerSpanColor;
+				}
+			}
+			p {
+				font-size: 14px;
+				line-height: 24px;
+				color: $paragraphLight;
+				word-spacing: 1px;
+			}
+		}
+	}
+	.map {
+		min-height: 634px;
+		position: relative; // make a half transparent shadow cover the map
+		&::before {
+			content: "";
+			opacity: 0.65;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: 1;
+			background: #000;
+		}
+		#googleMap {
+			min-height: 634px;
+		} // add another half transparent area for the form
+		.container {
+			color: #f3f3f3;
+			max-width: 945px;
+			padding: 80px 67px;
+			padding-bottom: 68px;
+			position: relative;
+			margin-top: -532px;
+			background: rgba(0, 0, 0, 0.37);
+			display: flex;
+			flex-wrap: wrap;
+			z-index: 15;
+			form {
+				max-width: 500px;
+				margin-right: 96px;
+				.nameEmail {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+				}
+				input,
+				textarea {
+					width: 238px;
+					background: none;
+					border: 1px solid $inputsBorder;
+					color: $white;
+					padding: 12px 0;
+					padding-left: 20px;
+					margin-bottom: 12px;
+					&[type="text"] {
+						margin-right: 14px;
+					}
+					&[type="checkbox"] {
+						width: auto;
+						background: none;
+					}
+					&[type="submit"] {
+						padding: 0;
+						height: 50px;
+						width: 120px;
+						background: $submitBtnColor;
+						color: $paragraphDark;
+						float: right;
+					}
+				}
+				textarea {
+					resize: none;
+					width: 100%;
+					min-height: 143px;
+				}
+				label {
+					padding-top: 10px;
+					color: #b7b7b7;
+					input {
+						visibility: hidden;
+						/* <-- hide the default checkbox, the rest is to hide and alllow tabbing, which display:none prevents */
+						display: block;
+						height: 0;
+						width: 0;
+						position: absolute;
+						overflow: hidden;
+					}
+					span {
+						/* <-- style the artificial checkbox */
+						height: 23px;
+						margin-right: 5px;
+						width: 23px;
+						border: 1px solid $inputsBorder;
+						display: inline-block;
+						position: relative;
+						top: 6px;
+					}
+					[type=checkbox]:checked+span {
+						/* <-- style its checked state */
+						background: black;
+					}
+				}
+			}
+			.details {
+				position: relative;
+				bottom: 7px;
+				p {
+					line-height: 24px;
+					margin-bottom: 24px;
+				}
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// 									Footer
+// -------------------------------------------------------------
+footer {
+	background: $footerBg;
+	.container {
+		min-height: 61px;
+		max-width: 1540px;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		p {
+			color: $footerParagraph;
+			margin: 0;
+		}
+		svg {
+			margin-left: 22px;
+			font-size: 16px;
+		}
+		.fa-facebook-f {
+			color: $facebookSVG;
+		}
+		.fa-twitter {
+			color: $twitterSVG;
+		}
+		.fa-google-plus-g {
+			color: $googleSVG;
+		}
+		.fa-dribbble {
+			color: $dribbleSVG;
+		}
+	}
+}
+
+// class to add the anchor tag wich contains product in it
+.displayNone {
+	display: none;
+}
+
+// when the product section is in view, change the anchor with product to the desired color
+.anchorColor {
+	color: rgb(0, 177, 221) !important;
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 911px) {
+	.contact {
+		.map {
+			.container {
+				// make the contact information go underneath the form
+				flex-direction: column;
+				padding: 0;
+				form {
+					margin-right: 0;
+					margin: auto;
+					margin-bottom: 20px;
+					textarea {
+						width: 100%;
+					}
+					label {
+						display: block;
+					}
+					input[type="submit"] {
+						float: none;
+						display: block;
+						margin: auto;
+					}
+				}
+				.details {
+					margin: auto;
+				}
+			}
+		}
+	}
+	.about {
+		.container {
+			img {
+				margin-left: 0;
+			}
+		}
+	}
+	footer {
+		.container {
+			flex-direction: column;
+			p {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.chooseUs {
+		.offer {
+			// make the offers go underneath each other
+			flex-direction: column;
+			.offerItem {
+				margin: auto;
+				margin-bottom: 10px;
+				&:last-child {
+					margin: auto;
+				}
+			}
+		}
+	}
+}

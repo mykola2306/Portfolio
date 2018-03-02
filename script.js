@@ -23,9 +23,9 @@ tabs[1].addEventListener("click", function () {
 //---------------------------------------------------------
 // make the second tab active for easier manipulation
 
-// tabs[1].classList.add("activeTab");
-// work.style.display = "none";
-// recreating.style.display = "block";
+tabs[1].classList.add("activeTab");
+work.style.display = "none";
+recreating.style.display = "block";
 //---------------------------------------------------------
 
 
