@@ -82,6 +82,7 @@ h3 span{
     padding: 10px 25px;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
 }
 
 .tab ul li:hover {
