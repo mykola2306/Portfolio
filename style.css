@@ -142,8 +142,39 @@ hr {
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-.work .row:nth-of-type(even) {
+.work .row:nth-of-type(odd) {
     padding-left: 150px;
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 1200px) {
+    .work .row:nth-of-type(odd) {
+        padding-left: 90px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .work .row:nth-of-type(odd) {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h3 {
+        text-align: center;
+    }
+    .technologies-used {
+        text-align: center;
+    }
+    .work .row:nth-of-type(odd) {
+        padding-left: 0;
+    }
+    .tab ul li {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
 }
 
 .work .row {
@@ -185,6 +216,10 @@ hr {
 
 .jquery {
     background: #0868ab;
+}
+
+.react {
+    background: #087ea4;
 }
 
 .dataExample {
@@ -233,41 +268,6 @@ hr {
 
 #myImg:hover {
     opacity: 0.7;
-}
-
-/* Small Devices, Tablets */
-
-@media only screen and (max-width: 1200px) {
-    .work .row:nth-of-type(even) {
-        padding-left: 90px;
-    }
-    /*
-    .work .row:nth-of-type(even) {
-    padding-left: 150px;
-*/
-}
-
-@media only screen and (max-width: 992px) {
-    .work .row:nth-of-type(even) {
-        padding-left: 40px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    h3 {
-        text-align: center;
-    }
-    .technologies-used {
-        text-align: center;
-    }
-    .work .row:nth-of-type(even) {
-        padding-left: 0;
-    }
-    .tab ul li {
-        width: 100%;
-        text-align: center;
-        float: none;
-    }
 }
 
 .tr {

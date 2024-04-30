@@ -3,7 +3,7 @@ var work = document.getElementById("work");
 var recreating = document.getElementById("recreating");
 recreating.style.display = "none";
 
-tabs[0].classList.add("activeTab");
+// tabs[0].classList.add("activeTab");
 
 tabs[0].addEventListener("click", function () {
     tabs[0].classList.add("activeTab");
@@ -73,8 +73,8 @@ window.onclick = function (event) {
 var h4 = document.querySelectorAll("h4");
 for (var i = 0; i < h4.length; i++) {
     h4[i].addEventListener("click", function () {
-        modalImg.src = h4[0].title;        
+        modalImg.src = this.title;        
         modal.style.display = "block";
-        captionText.innerHTML = this.alt;
+        captionText.innerHTML = this.dataset.caption; // this.alt;
     });
 }
